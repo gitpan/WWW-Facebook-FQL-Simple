@@ -43,7 +43,7 @@ WWW::Facebook::FQL::Simple - Simple interface for making FQL requests.
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -60,7 +60,7 @@ does not handle sessions or authentication so presumably some requests will not
 work.
 
 If your needs are more complex, you probably need L<WWW::Facebook::API> or
-L<WWWW::Facebook::FQL>.
+L<WWW::Facebook::FQL>.
 
 =head1 METHODS
 

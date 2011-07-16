@@ -20,4 +20,4 @@ requires:
   URI::Encode: 0
 resources:
   repository: git://github.com/adamtaylor/WWW-Facebook-FQL-Simple.git
-version: 0.01
+version: 0.02
