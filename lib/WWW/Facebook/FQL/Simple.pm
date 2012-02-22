@@ -8,6 +8,7 @@ use warnings;
 use JSON;
 use LWP::UserAgent;
 use URI::Encode qw( uri_encode );
+use Carp qw/croak/;
 
 my $API_BASE = 'http://api.facebook.com/method/fql.query?format=json&query=';
 
@@ -26,7 +27,7 @@ sub query {
         return decode_json $response->content;
     }
     else {
-        die $response->status_line;
+        croak $response->status_line;
     }
 
 }
@@ -43,19 +44,19 @@ WWW::Facebook::FQL::Simple - Simple interface for making FQL requests.
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
     use WWW::Facebook::FQL::Simple;
 
-    WWW::Facebook::FQL::Simple->query(
+    WWW::Facebook::FQL::Simple->query({
         query => 'SELECT like_count FROM link_stat WHERE url="http://twitter.com"'
-    );
+    });
 
 =head1 DESCRIPTION
 
-A no nonesense, dead simple interface to for making FQL requests. This module
+A no nonesense, dead simple interface for making FQL requests. This module
 does not handle sessions or authentication so presumably some requests will not
 work.
 
@@ -66,9 +67,9 @@ L<WWW::Facebook::FQL>.
 
 =head2 query
 
-    WWW::Facebook::FQL::Simple->query(
+    WWW::Facebook::FQL::Simple->query({
         query => 'SELECT like_count FROM link_stat WHERE url="http://twitter.com"'
-    );
+    });
 
 Returns a hash reference of the JSON returned from the API.
 

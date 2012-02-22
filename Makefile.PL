@@ -9,27 +9,30 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Simple interface for making FQL requests.',
-  'AUTHOR' => 'Adam Taylor <ajct@cpan.org>',
-  'BUILD_REQUIRES' => {
-    'English' => '0',
-    'Test::More' => '0'
+  "ABSTRACT" => "Simple interface for making FQL requests.",
+  "AUTHOR" => "Adam Taylor <ajct\@cpan.org>",
+  "BUILD_REQUIRES" => {
+    "English" => 0,
+    "Test::More" => 0
   },
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.30'
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'DISTNAME' => 'WWW-Facebook-FQL-Simple',
-  'EXE_FILES' => [],
-  'LICENSE' => 'perl',
-  'NAME' => 'WWW::Facebook::FQL::Simple',
-  'PREREQ_PM' => {
-    'JSON' => '0',
-    'LWP::UserAgent' => '0',
-    'URI::Encode' => '0'
+  "DISTNAME" => "WWW-Facebook-FQL-Simple",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "WWW::Facebook::FQL::Simple",
+  "PREREQ_PM" => {
+    "Carp" => 0,
+    "JSON" => 0,
+    "LWP::UserAgent" => 0,
+    "URI::Encode" => 0,
+    "strict" => 0,
+    "warnings" => 0
   },
-  'VERSION' => '0.02',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "0.03",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 
